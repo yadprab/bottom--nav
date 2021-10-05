@@ -84,12 +84,15 @@ a {
     display: grid;
     grid-template-columns: auto auto;
     place-items: center;
-
+    text-transform: uppercase;
+    font-weight: 500;
+    height: 40px;
+   
 
     #bg {
         background-color: var(--buttonBg);
         display: block;
-        width: 112px;
+        width: inherit;
         height: 40px;
         border-radius: 50px;
         position: absolute;
