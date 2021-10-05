@@ -1,0 +1,108 @@
+@import './uti';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+    --bg: hsla(102, 100%, 98%, 1);
+    --buttonBg: hsla(278, 73%, 97%, 1);
+    --text: hsla(279, 100%, 29%, 1);
+    --nav: hsla(105, 100%, 99%, 1);
+
+
+
+
+}
+
+html {
+
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    min-width: 100%;
+    overflow-x: hidden;
+    font-size: 100%;
+    height: 100%;
+
+}
+
+#root {
+    height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+
+
+}
+
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--bg);
+    font-family: 'Inter',
+        sans-serif;
+    line-height: 1.75;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+
+}
+
+nav {
+    max-width: 480px;
+    padding: 1em;
+    background-color: var(--nav);
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include box-shadow-4;
+
+}
+
+a {
+    @include medium-button;
+    position: relative;
+    display: grid;
+    grid-template-columns: auto auto;
+    place-items: center;
+
+
+    #bg {
+        background-color: var(--buttonBg);
+        display: block;
+        width: 112px;
+        height: 40px;
+        border-radius: 50px;
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    svg {
+        width: 19px;
+        height: 19px;
+        margin: 0 0.25em 0 0;
+    }
+}
